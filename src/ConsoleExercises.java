@@ -18,7 +18,7 @@ public class ConsoleExercises {
         String userStringFirst = scanner.next();
         String userStringSecond = scanner.next();
         String userStringThird = scanner.next();
-        System.out.printf("You entered: \"%s\", \"%s\", & \"%s\".\n", userStringFirst, userStringSecond, userStringThird);
+        System.out.printf("You entered: \n \"%s\",\n \"%s\", \n & \"%s\".\n", userStringFirst, userStringSecond, userStringThird);
         // P3
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter a sentence: ");
