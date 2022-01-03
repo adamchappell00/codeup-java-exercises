@@ -81,7 +81,7 @@ public class ControlFlowExercises {
             int userGrade = scanner.nextInt();
             if(userGrade >= 88 && userGrade <= 100){
                 System.out.println("You got an A!");
-            }else if (userGrade < 88 && userGrade > 80){
+            }else if (userGrade < 88 && userGrade >= 80){
                 System.out.println("You got a B.");
             }else if (userGrade < 80 && userGrade >= 67){
                 System.out.println("You got a C.");
