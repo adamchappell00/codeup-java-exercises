@@ -10,6 +10,7 @@ public class MethodsExercises {
         System.out.println(modulus(5,2));
         System.out.println(getInteger(1, 10));
         getFactorial();
+        rollDice();
     }
 
     public static int add(int num1, int num2){
@@ -45,7 +46,7 @@ public class MethodsExercises {
             for(int i = 1; i < userNum; i++){
                 factorial *= i + 1;
             }
-            System.out.println(factorial);
+            System.out.printf("Factorial of %s is: %s \n", userNum, factorial);
             System.out.println("Would you like to continue?");
             keepGoing = sc.nextBoolean();
         } while (keepGoing);
@@ -54,15 +55,13 @@ public class MethodsExercises {
         Scanner sc = new Scanner(System.in);
         Boolean keepGoing;
         do {
-            System.out.println("Let's roll a pair of dice! \n How many sides should each die have?");
+            System.out.println("Let's roll a pair of dice! \nHow many sides should each die have?");
             int sides = sc.nextInt();
-            double first = Math.random() * sides;
-            double second = Math.random() * sides;
-            System.out.printf("You Rolled %s and %s", (int) first, (int) second);
+            double first = Math.random() * (sides + 1);
+            double second = Math.random() * (sides + 1);
+            System.out.printf("You Rolled %s and %s \n", (int) first, (int) second);
             System.out.println("Would you like to continue?");
             keepGoing = sc.nextBoolean();
         } while (keepGoing);
     }
-
-
 }
