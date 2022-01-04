@@ -50,4 +50,19 @@ public class MethodsExercises {
             keepGoing = sc.nextBoolean();
         } while (keepGoing);
     }
+    public static void rollDice() {
+        Scanner sc = new Scanner(System.in);
+        Boolean keepGoing;
+        do {
+            System.out.println("Let's roll a pair of dice! \n How many sides should each die have?");
+            int sides = sc.nextInt();
+            double first = Math.random() * sides;
+            double second = Math.random() * sides;
+            System.out.printf("You Rolled %s and %s", (int) first, (int) second);
+            System.out.println("Would you like to continue?");
+            keepGoing = sc.nextBoolean();
+        } while (keepGoing);
+    }
+
+
 }
