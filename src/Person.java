@@ -18,7 +18,7 @@ public class Person {
     }
     public Person(String name) {
         this.name = name;
-        System.out.printf("A Person named %s has beeng created!", name);
+        System.out.println("A Person has been created with the name: "+ name);
     }
     public static void main(String[] args) {
         // TEST 1- Works
