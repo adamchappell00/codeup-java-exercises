@@ -1,3 +1,5 @@
+package Warmups;
+
 import java.util.Scanner;
 
 public class Warmups {
@@ -5,8 +7,8 @@ public class Warmups {
 
         Scanner scanner = new Scanner(System.in);
 
-        //January 6 Warmup - new class Penguin.java created
-        //    PSVM Insert for Warmups.java below:
+        //January 6 Warmup - new class Warmups.Penguin.java created
+        //    PSVM Insert for Warmups.Warmups.java below:
         Penguin steve = new Penguin("Steve" , "Emperor");
         Penguin david = new Penguin("David", "King");
         Penguin demi = new Penguin("Demi", "Galapagos");

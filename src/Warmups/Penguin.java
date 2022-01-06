@@ -1,3 +1,5 @@
+package Warmups;
+
 public class Penguin {
     private String name;
     private double weight;
@@ -47,7 +49,7 @@ public class Penguin {
         return sex;
     }
     /* January 6 Warmup - new class
-        DONE- Create a class named “Penguin”
+        DONE- Create a class named “Warmups.Penguin”
         DONE- Give your class the following private fields
                 Name, Weight,Species,Sex
         Give your class the following public methods
