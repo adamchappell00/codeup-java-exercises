@@ -9,7 +9,7 @@ public class Input {
         return scanner.nextLine();
     }
 
-    public static boolean yesNo() {
+    public boolean yesNo() {
         System.out.println("Give me a Boolean");
         String inputString = scanner.nextLine();
         return  (inputString.equalsIgnoreCase("y") || inputString.equalsIgnoreCase("true") || inputString.equalsIgnoreCase("yes"));
@@ -35,7 +35,7 @@ public class Input {
         }
         return inputDouble;
     }
-    public static double getDouble(){
+    public double getDouble(){
         System.out.println("Give me a double:\n");
         return scanner.nextDouble();
     }
