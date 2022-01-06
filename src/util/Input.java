@@ -37,7 +37,6 @@ public class Input {
     }
     double getDouble(){
         System.out.println("Give me a double:\n");
-        double inputDouble = scanner.nextDouble();
-        return inputDouble;
+        return scanner.nextDouble();
     }
 }
