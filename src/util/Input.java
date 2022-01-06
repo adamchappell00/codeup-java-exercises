@@ -12,10 +12,10 @@ public class Input {
     boolean yesNo() {
         System.out.println("Give me a Boolean");
         String inputString = scanner.nextLine();
-        return  (inputString.equalsIgnoreCase("y") || inputString.equalsIgnoreCase("true") || inputString.equalsIgnoreCase("yes")) {
+        return  (inputString.equalsIgnoreCase("y") || inputString.equalsIgnoreCase("true") || inputString.equalsIgnoreCase("yes"));
     }
 
-    int getInt(int min, int max) {
+    int getInt(int min, int max){
         System.out.printf("Give me an Integer between %s and %s:\n", min, max);
         int inputInt = scanner.nextInt();
         if ( inputInt > max || inputInt < min) {
