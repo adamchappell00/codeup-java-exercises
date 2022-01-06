@@ -16,20 +16,25 @@ public class Person {
 //TODO: Complete
 // print a message to the console using the person's name
     }
-
+    public Person(String name) {
+        this.name = name;
+        System.out.printf("A Person named %s has beeng created!", name);
+    }
     public static void main(String[] args) {
+        // TEST 1- Works
         /*
         Person person1 = new Person("John");
         Person person2 = new Person("John");
         System.out.println(person1.getName().equals(person2.getName()));
         System.out.println(person1 == person2);
         */
+        // TEST 2, Works
         /*
         Person person1 = new Person("John");
         Person person2 = person1;
         System.out.println(person1 == person2);
         */
-        /*
+        // TEST 3, Shocking, Both renamed to 'Jane'!
         Person person1 = new Person("John");
         Person person2 = person1;
         System.out.println(person1.getName());
@@ -37,6 +42,6 @@ public class Person {
         person2.setName("Jane");
         System.out.println(person1.getName());
         System.out.println(person2.getName());
-        */
+
     }
 }
