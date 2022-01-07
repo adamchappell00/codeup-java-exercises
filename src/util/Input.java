@@ -5,16 +5,19 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        System.out.println("Enter String");
+        System.out.println("Enter a String");
         return scanner.nextLine();
     }
-
     public boolean yesNo() {
         System.out.println("Enter Response (Y/Yes/true for Affirmative):");
         String inputString = scanner.next();
         return  (inputString.equalsIgnoreCase("y") || inputString.equalsIgnoreCase("true") || inputString.equalsIgnoreCase("yes"));
     }
-
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        String inputString = scanner.next();
+        return  (inputString.equalsIgnoreCase("y") || inputString.equalsIgnoreCase("true") || inputString.equalsIgnoreCase("yes"));
+    }
     public int getInt(int min, int max){
         System.out.printf("Enter an Integer between %s and %s:\n", min, max);
         int inputInt = scanner.nextInt();
