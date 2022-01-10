@@ -1,5 +1,26 @@
 package shapes;
 
+public class Rectangle extends Quadrilateral implements Measurable{
+
+    public double getPerimeter() {
+        return (length * 2) + (width * 2);
+    }
+
+    public double getArea() {
+        return length * width;
+    }
+
+    public void setLength(double newLength) {
+        length = newLength;
+    }
+
+    public void setWidth(double newWidth) {
+        width = newWidth;
+    }
+
+}
+/*
+-------Previous Version Below from initial Rectangle-Shapes Inheritance Exercise-----
 public class Rectangle {
     protected double length;
     protected double width;
@@ -16,3 +37,4 @@ public class Rectangle {
         return (2 * length) + (2 * width);
     }
 }
+*/
