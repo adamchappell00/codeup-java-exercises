@@ -8,6 +8,10 @@ public class Input {
         System.out.println("Enter a String");
         return scanner.next();
     }
+    public String getString(String prompt){
+        System.out.println(prompt);
+        return scanner.next();
+    }
     public boolean yesNo() {
         System.out.println("Enter Response (Y/Yes/true for Affirmative):");
         String inputString = scanner.next();
@@ -28,6 +32,10 @@ public class Input {
     }
     public int getInt(){
         System.out.println("Enter an Integer:");
+        return scanner.nextInt();
+    }
+    public int getInt(String prompt){
+        System.out.println(prompt);
         return scanner.nextInt();
     }
     public double getDouble(double min, double max){
