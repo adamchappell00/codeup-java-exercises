@@ -1,4 +1,5 @@
 package grades;
+import java.util.HashMap;
 
 public class GradesApplication {
     public static void main(String[] args) {
@@ -8,5 +9,7 @@ public class GradesApplication {
         Student elsa = new Student("Elsa");
         Student anna = new Student("Anna");
         Student olaf = new Student("Olaf");
+
+        HashMap<String, Student> students = new HashMap<>();
     }
 }
