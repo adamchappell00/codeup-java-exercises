@@ -31,7 +31,8 @@ public class GroceryListApp {
                     for (Map.Entry<String, Grocery> entry : groceries.entrySet()) {
                         String name = entry.getKey();
                         Grocery value = entry.getValue();
-                        System.out.println("-" + name + "\tQty: " + value.getQuantity() + "\tCategory: "+ value.getCategory());
+                        System.out.println("-" + name + "\tQty: " + value.getQuantity() + " "+value.getUnit()
+                                +"\tCategory: "+ value.getCategory());
                     }
                 }
                 if(in.yesNo("Would you like to add an item?")){
@@ -42,9 +43,10 @@ public class GroceryListApp {
                     String addItem = in.getString("Enter the Item Name:");
 
                     int addQty = in.getInt("How many " + addItem + " would you like to add?");
-                    System.out.printf("You entered: %s %s in the %s section,",addQty,addItem,addCategory);
+                    String qtyUnit = in.getString("What is the unit type for the quantity?");
+                    System.out.printf("You entered: %s %s of %s in the %s section,",addQty,qtyUnit,addItem,addCategory);
                     if(in.yesNo("\nAdd this item?")){
-                        groceries.put(addItem, new Grocery(addItem, addQty, addCategory));
+                        groceries.put(addItem, new Grocery(addItem, addQty, addCategory, qtyUnit));
                     }
                 };
             }while(in.yesNo("Would you like to continue?"));

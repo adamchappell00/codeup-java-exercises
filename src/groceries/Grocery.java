@@ -4,10 +4,12 @@ public class Grocery {
     private int quantity;
     private String name;
     private String category;
-    public Grocery(String name, int qty, String category){
+    private String unit;
+    public Grocery(String name, int qty, String category, String unit){
         this.name = name;
         this.quantity = qty;
         this.category = category;
+        this.unit = unit;
     }
     public void setName(String name) {
         this.name = name;
@@ -26,5 +28,8 @@ public class Grocery {
     }
     public int getQuantity() {
         return quantity;
+    }
+    public String getUnit() {
+        return unit;
     }
 }
