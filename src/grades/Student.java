@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Student {
     private String name;
+    private String github;
     private ArrayList<Integer> grades;
     public Student(String newName){
         name = newName;
@@ -11,6 +12,15 @@ public class Student {
     }
     public String getName(){
         return name;
+    }
+    public String getGithub(){
+        return github;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public void setGithub(String username){
+        this.github = username;
     }
     // adds the given grade to the grades property
     public void addGrade(int grade){

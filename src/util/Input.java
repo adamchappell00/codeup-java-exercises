@@ -6,7 +6,7 @@ public class Input {
 
     public String getString() {
         System.out.println("Enter a String");
-        return scanner.nextLine();
+        return scanner.next();
     }
     public boolean yesNo() {
         System.out.println("Enter Response (Y/Yes/true for Affirmative):");
