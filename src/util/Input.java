@@ -5,7 +5,7 @@ public class Input {
     private Scanner scanner = new Scanner(System.in);
 
     public String getString() {
-        System.out.println("Enter a String");
+        System.out.println("Enter your response:");
         return scanner.next();
     }
     public String getString(String prompt){
@@ -24,30 +24,49 @@ public class Input {
     }
     public int getInt(int min, int max){
         System.out.printf("Enter an Integer between %s and %s:\n", min, max);
-        int inputInt = scanner.nextInt();
+        String input = getString();
+
+        int inputInt = Integer.valueOf(input);
         if ( inputInt > max || inputInt < min) {
             return getInt(min, max);
         }
         return inputInt;
     }
     public int getInt(){
-        System.out.println("Enter an Integer:");
-        return scanner.nextInt();
+        String input = getString("Enter an Integer:");
+        int inputInt;
+        try{
+            inputInt =  Integer.valueOf(input);
+        } catch (NumberFormatException e){
+            System.out.println("input conversion for getInt() was not possible, expected a whole number, entered value was \""+input+"\"");
+            inputInt = getInt();
+        }
+        return inputInt;
     }
     public int getInt(String prompt){
-        System.out.println(prompt);
-        return scanner.nextInt();
+        String input = getString(prompt);
+        int inputInt = Integer.valueOf(input);
+        return inputInt;
+    }
+    public double getDouble(){
+        String input = getString("Enter in a number(double):");
+        double inputDbl;
+        try{
+            inputDbl =  Double.valueOf(input);
+        } catch (NumberFormatException e){
+            System.out.println("input conversion for getDouble() was not possible, expected a number, entered value was \""+input+"\"");
+            inputDbl = getDouble();
+        }
+        return inputDbl;
     }
     public double getDouble(double min, double max){
         System.out.printf("Enter a number(double) between %s and %s:\n", min, max);
-        double inputDouble = scanner.nextDouble();
+        String input = getString();
+        double inputDouble = Double.valueOf(input);
         if(inputDouble > max || inputDouble < min){
             return getDouble(min, max);
         }
         return inputDouble;
     }
-    public double getDouble(){
-        System.out.println("Enter a number(double):\n");
-        return scanner.nextDouble();
-    }
+
 }
